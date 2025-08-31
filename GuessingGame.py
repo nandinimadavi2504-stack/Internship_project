@@ -7,11 +7,6 @@ print("You have 10 attempts to guess it.")
 secret_number = random.randint(1, 100)
 attempts = 10
 
-# Debug mode: set True to see the number, False to hide
-DEBUG = True
-if DEBUG:
-    print("Debug: Secret number is", secret_number)
-
 for i in range(1, attempts + 1):
     guess_input = input(f"Attempt {i}: Enter your guess: ")
 
@@ -29,4 +24,5 @@ for i in range(1, attempts + 1):
         print(f"Congratulations! You guessed it in {i} attempts.")
         break
 else:
+    # Show secret number only if the user did not guess it
     print(f"Game over. The number was {secret_number}.")
